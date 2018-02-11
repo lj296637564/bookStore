@@ -1,15 +1,15 @@
 <template>
     <div id="app">
-      <header>掌上书城</header>
       <main>
-        <router-view/>
+        <header>{{ headerTitle }}</header>
+        <router-view class="content"/>
       </main>
         <footer>
             <nav>
-                <router-link tag="div" :to="{name: 'Home'}" exact>首页</router-link>           
-                <router-link tag="div" :to="{name:'Category'}">分类</router-link>
-                <router-link tag="div" :to="{name: 'Cart'}">购物车</router-link>
-                <router-link tag="div" :to="{name: 'Me'}">我</router-link>               
+                <router-link tag="div" :to="{name: 'Home'}" exact><p @click="headTitle('掌上书城')"><i class="fa fa-home"></i><span>首页</span></p></router-link>
+                <router-link tag="div" :to="{name:'Category'}"><p @click="headTitle('分类')"><i class="fa fa-align-justify"></i><span>分类</span></p></router-link>
+                <router-link tag="div" :to="{name: 'Cart'}"><p @click="headTitle('购物车')"><i class="fa fa-shopping-cart"></i><span>购物车</span></p></router-link>
+                <router-link tag="div" :to="{name: 'Me'}"><p  @click="headTitle('个人中心')"><i class="fa fa-user"></i><span>个人</span></p></router-link>
             </nav>
         </footer>
     </div>
@@ -17,39 +17,21 @@
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  data(){
+      return {
+          headerTitle: '掌上书城'
+      }
+  },
+  methods:{
+      headTitle(txt){
+          this.headerTitle = txt;
+      }
+  }
+
 };
 </script>
 
 <style lang="scss">
-$height44:44px;
-*,*::before,**::after{box-sizing: border-box}
-html,
-body {
-  height: 100%;
-  font: 14px "Microsoft YaHei", sans-serif, Arial;
-}
-header{text-align: center;height: $height44;line-height: $height44;background: rgb(47, 47, 47);color: #fff}
-footer{
-  position: fixed;bottom:0;width:100%;
-  nav{display:flex;justify-content: space-between;text-align:center;background:rgb(79, 79, 79);
-  .active{color: green};
-  div{height: $height44;line-height:$height44 ;width: 25%;color: #fff}
-  }
-}
-#app {
-
-  height: 100%;
-  &>main{height: calc(100% -  88px);
-  overflow-y:auto;
-  overflow-x:hidden
-
-  }
-
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-
-}
+    @import "./assets/style/app.scss";
 </style>

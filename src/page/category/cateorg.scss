@@ -1,0 +1,57 @@
+div.category{
+    padding: 0 10px;
+    div.search{
+        position: relative;
+        margin: 10px 0;
+        font-size: 20px;
+        i{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+        input{
+            height: 40px;
+            border-radius: 20px;
+            padding-left: 35px;
+            font-size: 18px;
+            /*&:focus{
+                border-color: #ccc;
+                box-shadow: none;
+                -webkit-box-shadow: none;
+            }*/
+        }
+    }
+    /*书籍样式*/
+    div.booksInfo{
+        margin: 15px 0;
+        &>div{
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            img{
+                height: 100px;
+            }
+            div.col-xs-9{
+                padding-left: 0;
+                height: 100px;
+                font-size: 16px;
+                p{
+                    color: #000;
+                    &.bookName{
+                        color: #00a2c4;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    &.bookAuthor{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    &.bookPrice{
+                        color: #ff0000;
+                    }
+                }
+            }
+        }
+    }
+}

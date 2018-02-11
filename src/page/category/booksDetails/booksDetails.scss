@@ -1,0 +1,128 @@
+div.booksDetails{
+    height: 100%;
+    width: 100%;
+    //background: #d4d4d4;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition-duration: 0.5s;
+    &.bookDetailShw{
+        transition-duration: 0.5s;
+        left: 0;
+    }
+    /*booksDetailsTitle样式*/
+    div.booksDetailsTitle{
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        height: 45px;
+        line-height: 45px;
+        background: #0A0A0A;
+        color: #f3f3f3;
+        padding: 0 15px;
+        i{
+            font-size: 28px;
+            line-height: 45px;
+            &:hover{
+                color: #1ace1a;
+            }
+        }
+    }
+    /*booksDetails样式*/
+    div.bookDetail{
+        height: calc(100% - 45px);
+        background: #fff;
+        transition-duration: 0.5s;
+        // 滚动条样式
+            overflow-y:scroll;
+            overflow-x:hidden;
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(171, 151, 198, 0.3);
+                border-radius: 3px;
+                cursor: hand;
+            }
+            &:hover::-webkit-scrollbar-thumb {
+                background-color: rgba(171, 151, 198, 0.4);
+            }
+
+
+        div.row{
+            margin: 20px auto 0;
+            background: #FFFFFF;
+            p.cancel{
+                font-size: 24px;
+                margin: 10px 0 10px;
+                text-align: right;
+            }
+            // 作者样式
+            div.col-xs-7{
+                font-size: 16px;
+                span{
+                    margin-left: 10px;
+                    color: #000;
+                    &.price{
+                        color: #ff0000;
+                    }
+                }
+            }
+            // 书的简介样式
+            div.col-xs-12{
+                h4{
+                    color: black;
+                    font-weight: 700;
+                    margin: 10px 0 15px;
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 16px;
+                    height: 240px;
+                    overflow: hidden;
+                    padding-top: 15px;
+                    color: rgb(107, 107, 107);
+                    margin-bottom: 30px;
+                }
+            }
+            // 按钮样式
+            div.btnStyle{
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                button{
+                    width: 47%;
+                    height: 50px;
+                    font-size: 18px;
+                    color: black;
+                    border: 1px solid #000;
+                    background: #FFFFFF;
+                    border-radius: 10px;
+                    outline:none;
+                    &.click{
+                        background: #1ace1a;
+                    }
+                }
+            }
+        }
+        /*内容介绍样式*/
+        div.introduce{
+            position: relative;
+            border: 1px solid #333;
+            margin-bottom: 20px;
+            padding: 0 10px;
+            span{
+                font-size: 18px;
+                color: black;
+                background: #FFFFFF;
+                position: absolute;
+                top: -13px;
+                padding: 0 5px;
+            }
+        }
+
+    }
+}

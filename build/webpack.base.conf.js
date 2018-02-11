@@ -27,7 +27,9 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'normalize':'/node_modules/normalize.css'
+      'normalize':'/node_modules/normalize.css',
+      'fontAwesome':'font-awesome/css/font-awesome.css',
+      'bootstrapCss':'bootstrap/dist/css/bootstrap.css'
     }
   },
   module: {
