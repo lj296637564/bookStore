@@ -46,7 +46,6 @@
               </div>
           </div>
       </div>
-
       <!--登录注册页面-->
       <div v-show="!userInfoFalse" class="loginLogonPage">
           <!--登录注册栏-->
@@ -102,7 +101,6 @@
           </div>
 
       </div>
-
       <!--确认注册页面-->
       <div class="sureLogon" :class="{sureLogonPage:sureLogonTrue}">
           <div>
@@ -174,47 +172,6 @@
         @returnMePage="returnMe"
         @add="clickAdd"
       />
-      <!--收货地址管理页面-->
-      <!--<div class="reviseData" :class="{reviseDataLeft0:addSitePageShow}">
-          &lt;!&ndash;确认添加地址弹出框&ndash;&gt;
-          <div class="sureRevise" :class="{hide:sureAdd}">
-              <div>
-                  <p>您是否确认添加当前收货地址？</p>
-                  <button type="button" @click="clickSureAdd" class="btn btn-lg btn-success">确认添加</button>
-                  <button type="button" @click="cancelRevise" class="btn btn-lg btn-default">取消</button>
-              </div>
-
-          </div>
-          <div class="title">
-              <i class="fa fa-angle-left" @click="returnMe"></i>
-              <span>收货地址</span>
-          </div>
-          <form>
-              <div>
-                  <label>姓名</label>
-                  <input type="text" placeholder="请填写您的真实姓名">
-              </div>
-              <div>
-                  <label>联系电话</label>
-                  <input type="text" placeholder="请填写我们联系您的电话号码">
-              </div>
-              <div>
-                  <label>邮政编码</label>
-                  <input type="text" placeholder="请填写您所在地区的邮政编码">
-              </div>
-              <div>
-                  <label>生日</label>
-
-              </div>
-              <div>
-                  <label>详细地址</label>
-                  <input type="text" placeholder="请填写详细的街道、楼栋、门牌号">
-              </div>
-          </form>
-          <div class="button">
-              <button type="button" @click="clickAdd" class="btn btn-lg btn-success">添加</button>
-          </div>
-      </div>-->
   </div>
 </template>
 <script src="./me.js"></script>
@@ -222,132 +179,4 @@
     @import "./me.scss";
     /*修改个人资料页面样式*/
     @import "./site/site.scss";
-    div.reviseData{
-        height: 100%;
-        width: 100%;
-        background: #f3f3f3;
-        position: fixed;
-        top:0;
-        left: 100%;
-        z-index: 10;
-        transition-duration: 0.5s;
-        &.reviseDataLeft0{
-            left: 0;
-            transition-duration: 0.5s;
-        }
-        /*确认修改弹出框样式*/
-        div.sureRevise{
-            height: 100%;
-            width: 100%;
-            text-align: center;
-            background: rgba(0,0,0,.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top:0;
-            left: 0;
-            z-index: 10;
-            opacity: 1;
-            transition-duration: 0.5s;
-            &.hide{
-                transition-duration: 0.5s;
-                opacity: 0;
-                z-index: -30;
-            }
-            &>div{
-                width: 80%;
-                height: 200px;
-                font-size: 18px;
-                background: #FFFFFF;
-                p{
-                    padding: 50px 0 30px;
-                }
-                button{
-                    margin-left: 10px;
-                }
-            }
-        }
-        div.title{
-            height: 50px;
-            font-size: 18px;
-            color: #FFFFFF;
-            background: #000;
-            line-height: 50px;
-            padding: 0 10px;
-            i{
-                font-size: 40px;
-                vertical-align: middle;
-                line-height: 40px;
-                margin-right: 30%;
-            }
-
-        }
-        form{
-            background: #FFFFFF;
-            div{
-                height: 50px;
-                line-height: 50px;
-                font-size: 18px;
-                padding: 0 10px;
-                border-bottom: 1px solid #929292;
-                label{
-                    color: #777;
-                    width: 75px;
-                }
-                a{
-                    color: #000;
-                    border: 1px solid #9d9d9d;
-                    border-radius: 15px;
-                    padding: 5px 0;
-                    overflow: hidden;
-                    &:focus,&:hover{
-                        text-decoration: none;
-                    }
-                    span{
-                        padding: 5px 15px;
-                        border-right: 1px solid #d7d7d7;
-                        &:nth-child(1){
-                            border-bottom-left-radius: 15px;
-                            border-top-left-radius: 15px;
-                        }
-                        &:nth-child(3){
-                            border-bottom-right-radius: 15px;
-                            border-top-right-radius: 15px;
-                        }
-                        &.bgGreen{
-                            background: #1ace1a;
-                            color: #FFFFFF;
-                        }
-                    }
-                }
-                input{
-                    border: 0;
-                    outline: none;
-                    height: 40px;
-                    width: 71%;
-                    &[type="data"]{width: auto}
-                    &.inputData{
-                        border: 1px solid #747474;
-                    }
-                }
-                &.describe{
-                    height: 130px;
-                    textarea{
-                        border: 0;
-                        outline: none;
-                        vertical-align: top;
-                    }
-                }
-            }
-        }
-        div.button{
-            width: 100%;
-            padding: 30px 15px;
-            button{
-                width: 100%;
-            }
-        }
-    }
 </style>
-

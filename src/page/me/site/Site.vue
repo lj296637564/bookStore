@@ -26,8 +26,34 @@
                 <label>邮政编码</label>
                 <input type="text" placeholder="请填写您所在地区的邮政编码">
             </div>
-            <div>
-                <label>生日</label>
+            <div class="address">
+                <select class="form-control">
+                    <option>四川省</option>
+                    <option>重庆</option>
+                    <option>山东省</option>
+                    <option>贵州省</option>
+                    <option>湖南省</option>
+                    <option>陕西省</option>
+                    <option>广东省</option>
+                </select>
+                <select class="form-control">
+                    <option>成都市</option>
+                    <option>绵阳市</option>
+                    <option>遂宁市</option>
+                    <option>南充市</option>
+                    <option>德阳市</option>
+                    <option>广元市</option>
+                    <option>广安市</option>
+                </select>
+                <select class="form-control">
+                    <option>金牛区</option>
+                    <option>锦江区</option>
+                    <option>武侯区</option>
+                    <option>成华区</option>
+                    <option>温江区</option>
+                    <option>双流县</option>
+                    <option>高新区</option>
+                </select>
 
             </div>
             <div>
